@@ -1,0 +1,129 @@
+body{
+    justify-content: center;
+}
+.bg-c {
+    background-color:rgb(255, 75, 75);
+}
+
+.frontcontainer {
+    height: 400px;
+    background-color: rgb(255, 75, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+.frontcontainer h1, .frontcontainer p {
+    text-align: center;
+    color: white;
+}
+
+.converter {
+    width: calc(100% - 20px); 
+    background-color: rgb(255, 255, 255);
+    margin: -70px 10px 0; 
+    padding: 20px;
+    position: relative; 
+    z-index: 1; 
+    border-radius: 8px;
+}
+.converter h2 {
+    text-align: center;
+    color: black;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.808);
+    margin-top:10px;
+}
+.footer-container{
+    height: 250px;
+    width: 350px;
+    padding: 20px;
+    margin-bottom: 10px;
+    
+}
+.footer-container h3{
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.footer-container i{
+    color: white;
+    font-size: 20px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.footer-container p{
+    color: grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+}
+.footer-container a{
+    color: grey;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+#social-media i{
+height: 20px;
+width: 20px;
+margin-right: 10px;
+}
+.copyright{
+display: flex;
+justify-content: center;
+align-items:center;
+flex-wrap: wrap;
+background-color: black;
+justify-content: space-evenly;
+padding-top:20px;
+
+}
+.copyright p{
+color: rgba(255, 255, 255, 0.329);
+font-family: "Open Sans", sans-serif;
+font-size: 15px;
+}
+.copyright a{
+color: white;
+
+}
+.copy1{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left:17px ;
+}
+.copy2{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.copy1 a{
+text-decoration: none;
+}
+
+.availability-form {
+    background: grey;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}
+.check-container {
+    width: 100%;
+    padding: 0 15px;
+}
+.form-group label {
+    color: white;
+}
+img{
+  width: 100px;  
+}

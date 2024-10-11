@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Payment</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Confirm Your Payment</h2>
+        <div id="ticket-details"></div>
+        <p>Price: ₹ <span id="ticket-price">500</span></p>
+        <button class="btn btn-success" id="success-btn">Success</button>
+        <button class="btn btn-danger" onclick="processPayment('cancel')">Cancel</button>
+    </div>
+
+    <script>
+        // Fetch stored form data from sessionStorage
+        const name = sessionStorage.getItem('name');
+        const from = sessionStorage.getItem('from');
+        const to = sessionStorage.getItem('to');
+        const date = sessionStorage.getItem('date');
+        const seats = sessionStorage.getItem('seats');
+        const price = 500 * parseInt(seats); // ₹1000 per seat
+
+        // Display ticket details
+        document.getElementById('ticket-details').innerHTML = `
+            <p>Name: ${name}</p>
+            <p>From: ${from}</p>
+            <p>To: ${to}</p>
+            <p>Date: ${date}</p>
+            <p>Seats: ${seats}</p>
+        `;
+        document.getElementById('ticket-price').textContent = price;
+
+        // Function to process payment
+        function processPayment(status) {
+            if (status === 'success') {
+                const ticketDetails = { name, from, to, date, seats, price };
+
+                // Add the ticket to the cookie
+                addTicketToCookie(ticketDetails);
+
+                alert('Ticket is booked successfully!');
+                window.location.href = 'index.html';
+            } else {
+                alert('Payment cancelled!');
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Function to get a specific cookie value
+        function getCookie(name) {
+            let cookieArr = document.cookie.split(";");
+
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");
+
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            return null;
+        }
+
+        // Function to set cookies
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to add a ticket to the cookie
+        function addTicketToCookie(ticket) {
+            let tickets = getCookie("tickets");
+
+            // If tickets exist, parse them, otherwise create an empty array
+            tickets = tickets ? JSON.parse(tickets) : [];
+
+            // Add the new ticket to the array
+            tickets.push(ticket);
+
+            // Store the updated array back into the cookies
+            setCookie("tickets", JSON.stringify(tickets), 7); // 7 days expiration
+        }
+
+        // On "Success" button click
+        document.getElementById("success-btn").addEventListener("click", function() {
+            const ticket = {
+                name: sessionStorage.getItem("name"),
+                from: sessionStorage.getItem("from"),
+                to: sessionStorage.getItem("to"),
+                date: sessionStorage.getItem("date"),
+                seats: sessionStorage.getItem("seats"),
+                price: price // Use calculated price
+            };
+
+            console.log('New ticket:', ticket); // Debug log
+
+            // Add the ticket to the cookie
+            addTicketToCookie(ticket);
+
+            // Show success message and redirect to index.html
+            alert("Ticket is booked successfully!");
+            window.location.href = "index.html";
+        });
+
+    </script>
+</body>
+</html>
