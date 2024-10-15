@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Timings</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .timetable {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mt-4">Bus Timings</h1>
+    
+    <div class="table-responsive timetable">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Pickup Location</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Time Gap</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ahmednagar</td>
+                    <td>09:00 AM</td>
+                    <td>10:30 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Akola</td>
+                    <td>09:30 AM</td>
+                    <td>11:30 AM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Amravati</td>
+                    <td>10:00 AM</td>
+                    <td>12:00 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Aurangabad</td>
+                    <td>10:30 AM</td>
+                    <td>11:30 AM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Beed</td>
+                    <td>11:00 AM</td>
+                    <td>12:30 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Bhandara</td>
+                    <td>11:30 AM</td>
+                    <td>01:00 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Bhadravati</td>
+                    <td>12:00 PM</td>
+                    <td>01:30 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Bid</td>
+                    <td>12:30 PM</td>
+                    <td>02:00 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Chandrapur</td>
+                    <td>01:00 PM</td>
+                    <td>03:00 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Dhule</td>
+                    <td>01:30 PM</td>
+                    <td>03:30 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Gadchiroli</td>
+                    <td>02:00 PM</td>
+                    <td>04:00 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Jalgaon</td>
+                    <td>02:30 PM</td>
+                    <td>04:30 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Jalna</td>
+                    <td>03:00 PM</td>
+                    <td>04:30 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Kolhapur</td>
+                    <td>03:30 PM</td>
+                    <td>05:30 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Latur</td>
+                    <td>04:00 PM</td>
+                    <td>06:00 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Mumbai City</td>
+                    <td>04:30 PM</td>
+                    <td>05:30 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Mumbai Suburban</td>
+                    <td>05:00 PM</td>
+                    <td>06:00 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Nagpur</td>
+                    <td>05:30 PM</td>
+                    <td>07:30 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Nanded</td>
+                    <td>06:00 PM</td>
+                    <td>08:00 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Nandurbar</td>
+                    <td>06:30 PM</td>
+                    <td>08:30 PM</td>
+                    <td>2 hours</td>
+                </tr>
+                <tr>
+                    <td>Nasik</td>
+                    <td>07:00 PM</td>
+                    <td>08:00 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Navi Mumbai</td>
+                    <td>07:30 PM</td>
+                    <td>08:30 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Palghar</td>
+                    <td>08:00 PM</td>
+                    <td>09:00 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Parbhani</td>
+                    <td>08:30 PM</td>
+                    <td>09:30 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Pune</td>
+                    <td>09:00 PM</td>
+                    <td>10:00 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Ratnagiri</td>
+                    <td>09:30 PM</td>
+                    <td>10:30 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Sangli</td>
+                    <td>10:00 PM</td>
+                    <td>11:30 PM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Satara</td>
+                    <td>10:30 PM</td>
+                    <td>11:30 PM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Sindhudurg</td>
+                    <td>11:00 PM</td>
+                    <td>12:30 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Solapur</td>
+                    <td>11:30 PM</td>
+                    <td>01:00 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Thane</td>
+                    <td>12:00 AM</td>
+                    <td>01:00 AM</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Wardha</td>
+                    <td>12:30 AM</td>
+                    <td>02:00 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Washim</td>
+                    <td>01:00 AM</td>
+                    <td>02:30 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+                <tr>
+                    <td>Yavatmal</td>
+                    <td>01:30 AM</td>
+                    <td>03:00 AM</td>
+                    <td>1.5 hours</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
