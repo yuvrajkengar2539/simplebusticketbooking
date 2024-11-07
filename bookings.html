@@ -18,19 +18,16 @@
         // Function to get a specific cookie value
         function getCookie(name) {
             let cookieArr = document.cookie.split(";");
-
             for (let i = 0; i < cookieArr.length; i++) {
                 let cookiePair = cookieArr[i].split("=");
-
-                if (name == cookiePair[0].trim()) {
+                if (name === cookiePair[0].trim()) {
                     return decodeURIComponent(cookiePair[1]);
                 }
             }
-
             return null;
         }
 
-        // Get all tickets from the cookie
+        // Retrieve all tickets from the "tickets" cookie
         const tickets = getCookie('tickets') ? JSON.parse(getCookie('tickets')) : [];
 
         console.log('Tickets retrieved from cookie:', tickets); // Debug log
@@ -40,13 +37,14 @@
             let ticketList = '';
             tickets.forEach((ticket, index) => {
                 ticketList += `
-                    <div class="ticket">
+                    <div class="ticket mb-4 p-3 border border-primary rounded">
                         <h5>Ticket ${index + 1}</h5>
                         <p><strong>Name:</strong> ${ticket.name}</p>
                         <p><strong>From:</strong> ${ticket.from}</p>
                         <p><strong>To:</strong> ${ticket.to}</p>
                         <p><strong>Date:</strong> ${ticket.date}</p>
                         <p><strong>Seats:</strong> ${ticket.seats}</p>
+                        <p><strong>Bus Number:</strong> ${ticket.busnumber}</p>
                         <p><strong>Price:</strong> ₹${ticket.price}</p>
                         <hr>
                     </div>
@@ -57,8 +55,6 @@
         } else {
             document.getElementById('ticket-info').innerHTML = '<p>No booked tickets found.</p>';
         }
-
     </script>
-
 </body>
 </html>
